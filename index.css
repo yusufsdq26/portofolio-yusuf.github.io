@@ -1,0 +1,370 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+html {
+    scroll-behavior: smooth;
+}
+/* fixed navbar */
+.header {
+        
+    background-color: rgb(29, 130, 91);
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+.header a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+.header a:hover {
+    background: rgb(29, 130, 91);
+    color: rgb(29, 130, 91);
+  }
+  
+.main {
+    padding: 16px;
+    margin-top: 30px;
+    height: 1500px; /* Used in this example to enable scrolling */
+  }
+/* end fixed navbar */
+#profil {
+    height: 600px;
+    background-color: rgb(220, 255, 172);
+  }
+  
+#about {
+    height: 600px;
+    background-color: rgb(134, 244, 202);
+  }
+#skills {
+    height: 600px;
+    background-color: rgb(220, 255, 172);
+}
+#contact {
+    height: 600px;
+    background-color: rgb(134, 244, 202);
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(134, 244, 202);
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+
+}
+p {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 30px;
+    margin-right: 20px;
+    margin-top: 20px;
+
+}
+h3 {
+    font-family: 'Pacifico', 'cursive';
+    text-align: center;
+    letter-spacing: 3px;
+    font-size: 40px;
+    margin-top: 5%;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    background-color: rgb(29, 130, 91);
+    justify-content: space-around;
+    /* padding: 20px 0; */
+    color: rgb(238, 255, 236);
+    height: 50px;
+    align-items: center;
+}
+
+nav .logo {
+    font-family: 'Pacifico', 'cursive';
+    letter-spacing: 3px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-between;
+
+}
+
+nav ul li a {
+    color: rgb(149, 238, 164);
+    text-decoration: none;
+    font-size: 0.6cm;
+}
+
+nav ul li a:hover {
+    color: rgb(242, 247, 243);
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu-toggle input{
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -5px;
+    top: -3px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color:  rgb(149, 238, 164);
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+/* Hamburger  Menu Animation*/
+.menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(3) {
+    transform-origin: 0 100;
+}
+
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+    background-color: white;
+    transform: rotate(45deg) translate( 0px, -1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+    background-color: white;
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+    opacity: 0;
+    transform: scale(0);
+}
+
+/* about */
+.sosmed {
+    height: 150px;
+    width: 150px;
+    top: 30px;
+    position: relative;
+    align-items: center;
+    padding: 20px;
+    margin: 10px;
+    justify-items: center;
+    z-index: auto;
+}
+.sosmed :hover {
+    height: 80px;
+    width: 80px;
+    z-index: auto;
+}
+
+
+/* img profil*/
+    .foto {
+        height: 200px;
+        width: 150px;
+        border-radius: 20%;
+        margin-top: 10%;
+        margin-left: 40%;
+    }
+    
+    .foto :hover {
+        cursor: pointer;
+        height: 220px;
+        width: 170px;
+        
+    }
+
+/* Ukuran Tablet */
+@media screen and (max-width: 7686px) {
+    .header {
+        
+        background-color: rgb(29, 130, 91);
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+      
+    .header a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+      
+    .header a:hover {
+        background: rgb(29, 130, 91);
+        color: rgb(29, 130, 91);
+      }
+      
+    .main {
+        padding: 16px;
+        margin-top: 30px;
+        height: 1500px; /* Used in this example to enable scrolling */
+      }
+
+    nav ul {
+        width: 50%;
+    }
+    .sosmed {
+        display: flex;
+        height: 120px;
+        width: 120px;
+        top: 30px;
+        left: 40px;
+        position: relative;
+        float: left;
+        padding: 20px;
+        margin: 10px;justify-items: center;
+    }
+    .sosmed :hover {
+        height: 150px;
+        width: 150px;
+        z-index: auto;
+    }
+    .foto {
+        height: 300px;
+        width: 250px;
+        border-radius: 20%;
+        margin-top: 5%;
+        
+    }
+    .foto :hover {
+        height: 320px;
+        width: 270px;
+        transition: all 0.5s;
+    }
+
+}
+
+/* Ukuran Mobile */
+@media screen and (max-width: 576px) {
+
+    .header {
+        
+        background-color: rgb(29, 130, 91);
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+      
+    .header a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        
+      }
+      
+    .header a:hover {
+        background: rgb(29, 130, 91);
+        color: rgb(29, 130, 91);
+      }
+      
+    .main {
+        padding: 16px;
+        margin-top: 30px;
+        height: 1500px; /* Used in this example to enable scrolling */
+      }
+    #profil {
+        height: 600px;
+        background-color: rgb(220, 255, 172);
+      }
+      
+    #section2 {
+        height: 600px;
+        background-color: yellow;
+      }
+    
+    .menu-toggle{
+        display: flex;
+        position: relative;
+        
+        
+        
+    }
+    nav ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 80%;
+        height: 100vh;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        z-index: -1;
+        background-color: rgb(29, 130, 91);
+        transform: translateX(100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+
+    nav ul.slide {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    .sosmed {
+        display: flex;
+        height: 70px;
+        width: 70px;
+        top: 30px;
+        left: 10px;
+        position: relative;
+        float: left;
+        padding: 20px;
+        margin: 10px;justify-items: center;
+    }
+    .sosmed :hover {
+        height: 80px;
+        width: 80px;
+        z-index: auto;
+    }
+    .foto {
+        align-items: center;
+        height: 200px;
+        width: 150px;
+        border-radius: 20%;
+        margin-top: 5%;
+    
+    }
+    .foto, img :hover {
+        cursor: pointer;
+        height: 220px;
+        width: 170px;
+        
+    }
+
+}
